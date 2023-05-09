@@ -1,0 +1,15 @@
+.cart-payment{
+    /* border: 1px solid red; */
+    border-radius: 5px;
+    position: absolute;
+    width: 30%;
+    left: 70%;
+    top: 160px;
+    
+    background: linear-gradient(to bottom right, #b8c6db, #1559be);
+    /* border: 5px solid green; */
+}
+.cards{
+    /* border: 5px solid green; */
+    width: 70%;
+}

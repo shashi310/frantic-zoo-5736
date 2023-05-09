@@ -1,0 +1,31 @@
+.footer-container{
+    border: 1px solid;
+    display: flex;
+    background-color: #3e8562
+    
+}
+.footer-container >div>h5{
+    color: black;
+    white-space: nowrap; 
+    
+}
+.footer-container  > div{
+    color: rgb(208, 201, 201);
+    position: relative;
+    /* left: 10%; */
+    margin-left: 5%;
+    
+}
+.footer-container  > div > h6{
+   /* border: 1px solid; */
+   margin: 4px;
+   padding: 0;
+   font-family: 'Poppins', sans-serif;
+}
+.follow  > img{
+   /* border: 1px solid; */
+   margin-top: 10px;
+   margin-left: 90px;
+   width: 40%;
+ 
+}

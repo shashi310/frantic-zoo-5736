@@ -1,0 +1,268 @@
+.Home-container > .two-in-one{
+}
+.Home-container h1{
+   text-align: center;
+   margin-bottom: 10px;
+}
+.Home-container > div > img{
+   width: 100%;
+}
+
+#Send-flowers{
+   margin: auto;
+   display: grid;
+   grid-template-columns: repeat(6,1fr);
+   gap: 10px;
+   text-align: center;
+   /* border: 1px solid red; */
+}
+#Send-flowers img{
+   overflow: hidden;
+   /* border: 1px solid red; */
+   width: 100%;
+   transition: all 0.3s ease;
+}
+#Send-flowers img:hover{
+   transform: scale(1.2);
+}
+
+
+
+
+
+#Send-flowerss{
+   margin: auto;
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 20px;
+   text-align: center;
+   /* border: 1px solid red; */
+}
+#Send-flowerss img{
+   overflow: hidden;
+   /* border: 1px solid red; */
+   width: 70%;
+   transition: all 0.3s ease;
+}
+#Send-flowerss img:hover{
+   transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+.birthday-special{
+   margin-top: 50px;
+}
+
+/* -------------------------------Form----------home-----ocassion -------- */
+.form-home-occasion{
+   margin-bottom: 10px;
+   display: flex;
+   
+   background-color: #ffffffdd;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   width: 70%;
+   margin: auto;
+   position: relative;
+   bottom: 40px;
+   margin-bottom: 20px;
+   
+}
+.form-home-occasion h4{
+   white-space: nowrap;
+   position: relative;
+   left: 10px;
+   margin: auto;
+}
+.form-home-occasion button{
+   white-space: nowrap;
+   height: 23px;
+   color: white;
+   border: none;
+   border-radius: 3px;
+   margin-right: 5%;
+   margin: auto;
+   background-color: rgb(110, 50, 144);
+   position: relative;
+   right: 45px;
+}
+.Find-perfecti-gift{
+   display: flex;
+   margin-left: 50px;
+   margin-right: 50px;
+   padding-bottom: 10px;
+   /* gap: 10px; */
+}
+.hero{
+   margin-right: 10px;
+}
+.hero select{
+   height: 22px;
+   width: 150px;
+}
+
+/* ----------------two-spring-bulb-------------- */
+.two-spring-htag{
+   
+   color:rgb(110, 50, 144);
+  text-align: center;
+}
+.two-spring-bulb{
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   width: 70%;
+   margin: auto;
+   gap: 20px;
+}
+.two-spring-bulb>img{
+   margin-top: 20px;
+   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+/* -----------------selfcare---------------- */
+.selfcare{
+   
+   margin-top: 20px;
+
+   display: grid;
+   grid-template-columns: repeat(6,1fr);
+   gap: 5px;
+   overflow: hidden;
+}
+.selfcare > img{
+   width: 100%;
+   transition: all 0.3s ease;
+   
+}
+.selfcare > img:hover{
+   transform: scale(1.1);
+}
+.delicious-gift{
+   text-align: center;
+   /* border: 1px solid red; */
+   color: rgb(110, 50, 144);
+   
+}
+.gifts-and-more{
+   margin-top: 20px;
+}
+.gifts-and-more >div{
+   margin: auto;
+   width: 35%;
+   /* border: 2px solid red; */
+   position: relative;
+   bottom: 300px;
+}
+.gifts-and-more >div>img{
+   position: absolute;
+   height: 230px;
+   width: 100%;
+}
+/* ----------------------------eight-images------------------------- */
+.eight-images {
+   display: grid;
+   grid-template-columns: repeat(8,1fr);
+   gap: 15px;
+}
+.eight-images > div {
+   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   text-align: center;
+   width: 100%;
+}
+.eight-images > div >img{
+   width: 100%;
+}
+
+.eight-images > div >p{
+  white-space: nowrap;
+  font-size: x-small;
+}
+/* -------------------free-shipping-poster------------------- */
+.free-shipping-poster{
+   margin-top: 20px;
+}
+.free-shipping-poster > img{
+   height: 250px;
+}
+/* ------------------------------insta-icon-four-images----------------- */
+.insta-icon-four-images{
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 20px;
+}
+
+/* -----------------------rating------------------------- */
+.rating-heading{
+   margin-top: 30px;
+   text-align: center;
+}
+.rating{
+   /* border: 1px solid red; */
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 10px;
+}
+.rating > div{
+   border-right: 1px solid black;
+   align-items: center;
+
+   /* padding: 10px; */
+   margin-bottom: 10px;
+   text-align: center;
+   
+}
+.rating > div img{
+    /* border: 2px solid red; */
+    margin-left: 80px;
+   
+}
+.rating > div p {
+   margin-right: 10px;  
+   font-size: 10px;
+}
+.start-color{
+   display: flex;
+   margin-left: 100px;
+   color: rgb(110, 50, 144);
+}
+/* -----------powered-by-img------------------------ */
+/* .powered-by-img >p {
+   width: 20px;
+   color: red;
+
+} */
+.powered-by-img {
+   align-items: center;
+   display: flex;
+   width: 30px;
+   margin: auto;
+   white-space: nowrap;
+   color: rgb(4, 110, 152);
+   margin-bottom: 10px;
+}
+.powered-by-img > div>img {
+   display: flex;
+   width: 30px;
+   margin: auto;
+   /* border: 1px solid; */
+}
+/* --------------------deliver-heading--------------- */
+.deliver-heading > h4{
+    font-family: 'Poppins';
+}
+.color >h5{
+   color: #212121;
+   font-family: sans-serif;
+   background-color: #e8eaec;
+   padding: 5px;
+}
+.color p{
+   font-family: sans-serif;
+   font-size: 10px;
+  margin: 10px;
+  margin-bottom: 20px;
+}

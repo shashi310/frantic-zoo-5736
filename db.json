@@ -164,13 +164,22 @@
   ],
   "cart": [
     {
-      "name": "Dabur Pudin Hara Pearls Capsule 10's",
-      "price": 30,
+      "name": "Dettol Antiseptic Liquid 60 ml",
+      "price": 45,
       "rating": 4,
-      "mkt": "Mkt: Dabur India Ltd",
-      "category": "Ayurvedic",
-      "image": "https://www.netmeds.com/images/product-v1/150x150/15917/dabur_pudin_hara_pearls_capsule_10_s_0.jpg",
-      "id": 1
+      "mkt": "Mkt: Reckitt Benckiser India Ltd",
+      "category": "Covid Essentials",
+      "image": "https://www.netmeds.com/images/product-v1/150x150/15114/dettol_antiseptic_liquid_60_ml_0_2.jpg",
+      "id": 19
+    },
+    {
+      "name": "Revital H Capsule 60'S",
+      "price": 550,
+      "rating": 4,
+      "mkt": "Mkt: Sun Pharmaceutical Industries Lt",
+      "category": "Suppliment",
+      "image": "https://www.netmeds.com/images/product-v1/150x150/113653/revital_h_capsule_60s_37254_0_1.jpg",
+      "id": 7
     }
   ],
   "login": [

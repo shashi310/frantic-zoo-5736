@@ -1,0 +1,14 @@
+.conatiner-payment{
+    border: 2px solid red;
+    width: 50%;
+    margin: auto;
+    /* height: 400px; */
+    padding: 0;
+    
+}
+/* style={{
+    backgroundImage: "url('/images/my-background-image.jpg')",
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    height: '100vh'
+  }} */

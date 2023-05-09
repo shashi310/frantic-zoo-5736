@@ -1,7 +1,4 @@
-
 {
-
-
   "admin": [
     {
       "id": "admin",
@@ -20,37 +17,179 @@
       "id": "tester1@gmail.com"
     },
     {
-      "id": "max@gmail.com"
+      "id": "tester2@gmail.com"
     }
   ],
-
-  "users": [
+  "orders": [
     {
-      "id": "shashi31396s@gmail.com",
-      "name": "SHASHI",
-      "pass": "1234",
-      "history": [
+      "userdatails": {
+        "name": "raka",
+        "email": "12@gmail.cpo",
+        "address": "delhi",
+        "zip": "110096",
+        "cardNumber": "123",
+        "expDate": "123",
+        "cvv": "12"
+      },
+      "cart": [
         {
-          "date": "May 3rd 2023, 1:08:11 pm",
-          "orderTotal": 30,
-          "prducts": [
-            {
-              "name": "Dabur Pudin Hara Pearls Capsule 10's",
-              "price": 30,
-              "rating": 4,
-              "mkt": "Mkt: Dabur India Ltd",
-              "category": "Accessories",
-              "image": "https://www.netmeds.com/images/product-v1/150x150/15917/dabur_pudin_hara_pearls_capsule_10_s_0.jpg",
-              "id": 1,            
-              "Qty": 1
-            }
-          ]
+          "name": "Zandu Balm 25 ml",
+          "price": 85,
+          "rating": 4,
+          "mkt": "Mkt: Emami Ltd",
+          "category": "Ayurvedic",
+          "image": "https://www.netmeds.com/images/product-v1/150x150/13523/zandu_balm_25_ml_0.jpg",
+          "id": 6,
+          "quantity": 1
         }
-      ]
+      ],
+      "id": 1
+    },
+    {
+      "userdatails": {
+        "name": "raka",
+        "email": "Shashi31396s@gmail.com",
+        "address": "mumbai",
+        "zip": "11111",
+        "cardNumber": "11111",
+        "expDate": "1111",
+        "cvv": "1111"
+      },
+      "cart": [
+        {
+          "name": "Dabur Pudin Hara Pearls Capsule 10's",
+          "price": 30,
+          "rating": 4,
+          "mkt": "Mkt: Dabur India Ltd",
+          "category": "Ayurvedic",
+          "image": "https://www.netmeds.com/images/product-v1/150x150/15917/dabur_pudin_hara_pearls_capsule_10_s_0.jpg",
+          "id": 1
+        }
+      ],
+      "id": 2
+    },
+    {
+      "userdatails": {
+        "name": "SHASHIKANT YADAV",
+        "email": "Yshashikant313@gmail.com",
+        "address": "delhi",
+        "zip": "110096",
+        "cardNumber": "12345",
+        "expDate": "123",
+        "cvv": "123"
+      },
+      "cart": [
+        {
+          "name": "Equal Original Low Calorie Sweetener Sachets 100's",
+          "price": 150,
+          "rating": 4,
+          "mkt": "Mkt: Whole Earth Brands Pvt. Ltd.",
+          "category": "Diabetes Care",
+          "image": "https://www.netmeds.com/images/product-v1/150x150/925481/equal_original_low_calorie_sweetener_sachets_100s_409768_0_0.jpg",
+          "id": 16
+        }
+      ],
+      "id": 3
+    },
+    {
+      "userdatails": {
+        "name": "Shashi",
+        "email": "abc@gmail.com",
+        "address": "delhi",
+        "zip": "110096",
+        "cardNumber": "123",
+        "expDate": "123",
+        "cvv": "123"
+      },
+      "cart": [
+        {
+          "name": "Revital H Capsule 60'S",
+          "price": 550,
+          "rating": 4,
+          "mkt": "Mkt: Sun Pharmaceutical Industries Lt",
+          "category": "Suppliment",
+          "image": "https://www.netmeds.com/images/product-v1/150x150/113653/revital_h_capsule_60s_37254_0_1.jpg",
+          "id": 7
+        }
+      ],
+      "id": 4
+    },
+    {
+      "userdatails": {
+        "name": "Shashikant Yadav",
+        "email": "shashi31396s@gmail.com",
+        "address": "delhi",
+        "zip": "110096",
+        "cardNumber": "12345",
+        "expDate": "123",
+        "cvv": "123"
+      },
+      "cart": [
+        {
+          "name": "Dr.Morphen Premium ORS Refreshing Orange Flavour",
+          "price": 22,
+          "rating": 4,
+          "mkt": "Mkt: Dr Morepen",
+          "category": "Suppliment",
+          "image": "https://www.netmeds.com/images/product-v1/150x150/856551/dr_morphen_premium_ors_refreshing_orange_flavour_21_8_gm_0_0.jpg",
+          "id": 10,
+          "quantity": 2
+        }
+      ],
+      "id": 5
+    },
+    {
+      "userdatails": {
+        "name": "Shashikant Yadav",
+        "email": "12@gmail.cpo",
+        "address": "delhi",
+        "zip": "110096",
+        "cardNumber": "12345",
+        "expDate": "123",
+        "cvv": "123"
+      },
+      "cart": [
+        {
+          "name": "Dabur Pudin Hara Pearls Capsule 10's",
+          "price": 30,
+          "rating": 4,
+          "mkt": "Mkt: Dabur India Ltd",
+          "category": "Ayurvedic",
+          "image": "https://www.netmeds.com/images/product-v1/150x150/15917/dabur_pudin_hara_pearls_capsule_10_s_0.jpg",
+          "id": 1
+        }
+      ],
+      "id": 6
     }
   ],
-
-
+  "cart": [
+    {
+      "name": "Dabur Pudin Hara Pearls Capsule 10's",
+      "price": 30,
+      "rating": 4,
+      "mkt": "Mkt: Dabur India Ltd",
+      "category": "Ayurvedic",
+      "image": "https://www.netmeds.com/images/product-v1/150x150/15917/dabur_pudin_hara_pearls_capsule_10_s_0.jpg",
+      "id": 1
+    }
+  ],
+  "login": [
+    {
+      "email": "12@gmail.cpo",
+      "password": "12",
+      "id": 1
+    },
+    {
+      "email": "abc@gmail.com",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "email": "abcd@gmail.com",
+      "password": "12345",
+      "id": 3
+    }
+  ],
   "products": [
     {
       "name": "Dabur Pudin Hara Pearls Capsule 10's",
@@ -106,11 +245,6 @@
       "image": "https://www.netmeds.com/images/product-v1/150x150/13523/zandu_balm_25_ml_0.jpg",
       "id": 6
     },
-
-
-
-
-
     {
       "name": "Revital H Capsule 60'S",
       "price": 550,
@@ -165,12 +299,6 @@
       "image": "https://www.netmeds.com/images/product-v1/150x150/858571/inlife_multivitamins_and_minerals_for_women_capsules_60_s_0.jpg",
       "id": 12
     },
-    
-  
-
-    
-
-
     {
       "name": "Amrutanjan Decorn Corn Caps 4's",
       "price": 30,
@@ -225,10 +353,6 @@
       "image": "https://www.netmeds.com/images/product-v1/150x150/828486/so_sweet_100_natural_0_calories_sweetener_spoonable_powder_250_gm_0.jpg",
       "id": 18
     },
-
-
-
-
     {
       "name": "Dettol Antiseptic Liquid 60 ml",
       "price": 45,
@@ -283,10 +407,6 @@
       "image": "https://www.netmeds.com/images/product-v1/150x150/859708/omron_compressor_nebulizer_ne_c101_0.jpg",
       "id": 24
     },
-
-
-
-
     {
       "name": "Combidress Combine Dressing Pad (10 cm x 10 cm)",
       "price": 90,
@@ -340,72 +460,114 @@
       "category": "Surgical",
       "image": "https://www.netmeds.com/images/product-v1/150x150/337470/ramaraju_cotton_wool_400_gm_41141_0_1.jpg",
       "id": 30
+    },
+    {
+      "name": "Renu Fresh Multi Purpose Solution 500 ml",
+      "price": 648,
+      "rating": 4,
+      "mkt": "Mkt: Bausch & Lomb India Private Ltd",
+      "category": "Eyewear",
+      "image": "https://www.netmeds.com/images/product-v1/150x150/108961/renu_fresh_multi_purpose_solution_500_ml_0_1.jpg",
+      "id": 31
+    },
+    {
+      "name": "Biotrue Multi Purpose Solution 300 ml",
+      "price": 600,
+      "rating": 4,
+      "mkt": "Mkt: Bausch & Lomb India Private Lim",
+      "category": "Eyewear",
+      "image": "https://www.netmeds.com/images/product-v1/150x150/408979/biotrue_multi_purpose_solution_300_ml_0.jpg",
+      "id": 32
+    },
+    {
+      "name": "Renu Fresh Multi Purpose Solution 120 ml",
+      "price": 250,
+      "rating": 4,
+      "mkt": "Mkt: Bausch & Lomb India Private Limted",
+      "category": "Eyewear",
+      "image": "https://www.netmeds.com/images/product-v1/150x150/108959/renu_fresh_multi_purpose_solution_120_ml_0.jpg",
+      "id": 33
+    },
+    {
+      "name": "Biotrue Multi Purpose Solution 120 ml",
+      "price": 330,
+      "rating": 4,
+      "mkt": "Mkt: Bausch & Lomb India Private Limited",
+      "category": "Eyewear",
+      "image": "https://www.netmeds.com/images/product-v1/150x150/408978/biotrue_multi_purpose_solution_120_ml_0_1.jpg",
+      "id": 34
+    },
+    {
+      "name": "Purecon Gp Care for Hard & Rgp Contact Lenses Solution",
+      "price": 300,
+      "rating": 4,
+      "mkt": "Mkt: Purecon Lenses Pvt Ltd",
+      "category": "Eyewear",
+      "image": "https://www.netmeds.com/images/product-v1/150x150/413808/purecon_gp_care_for_hard_rgp_contact_lenses_solution_140_ml_0.jpg",
+      "id": 35
+    },
+    {
+      "name": "Bausch & Lomb Boston Simplus Multi-Action Solution",
+      "price": 240,
+      "rating": 4,
+      "mkt": "Mkt: Bausch & Lomb India Private Ltd",
+      "category": "Eyewear",
+      "image": "https://www.netmeds.com/images/product-v1/150x150/891732/bausch_lomb_boston_simplus_multi_action_solution_105_ml_0.jpg",
+      "id": 36
+    },
+    {
+      "name": "Himalaya Himcal Pet 200 ml",
+      "price": 150,
+      "rating": 4,
+      "mkt": "Mkt: Himalaya Wellness Company",
+      "category": "Veterinary",
+      "image": "https://www.netmeds.com/images/product-v1/150x150/844110/himalaya_himcal_pet_200_ml_0.jpg",
+      "id": 37
+    },
+    {
+      "name": "Himalaya Anxocare Vet Tablets 60's",
+      "price": 172,
+      "rating": 4,
+      "mkt": "Mkt: Himalaya Wellness Company",
+      "category": "Veterinary",
+      "image": "https://www.netmeds.com/images/product-v1/150x150/844103/himalaya_anxocare_vet_tablets_60_s_0.jpg",
+      "id": 38
+    },
+    {
+      "name": "Himalaya Nefrotec DS Vet Tablets 60's",
+      "price": 160,
+      "rating": 4,
+      "mkt": "Mkt: Himalaya Wellness Company",
+      "category": "Veterinary",
+      "image": "https://www.netmeds.com/images/product-v1/150x150/844111/himalaya_nefrotec_ds_vet_tablets_60_s_0.jpg",
+      "id": 39
+    },
+    {
+      "name": "Wiggles Pet Dogs & Cats Sanitizer Spray 100 ml",
+      "price": 333,
+      "rating": 4,
+      "mkt": "Mkt: Sixth Sense Retail Private Limited",
+      "category": "Veterinary",
+      "image": "https://www.netmeds.com/images/product-v1/150x150/1069377/wiggles_pet_dogs_cats_sanitizer_spray_100_ml_495122_0_2.jpg",
+      "id": 40
+    },
+    {
+      "name": "Canine Creek Adult Dog Food, Ultra Premium 1200 gm",
+      "price": 590,
+      "rating": 4,
+      "mkt": "Mkt: Abis Exports (India) Pvt. Ltd.",
+      "category": "Veterinary",
+      "image": "https://www.netmeds.com/images/product-v1/150x150/1066454/canine_creek_adult_dry_dog_food_ultra_premium_1200_gm_496789_0_0.jpg",
+      "id": 41
+    },
+    {
+      "name": "Wiggles Floor Cleaner Liquid Pet Friendly (Lemongrass) 500",
+      "price": 399,
+      "rating": 4,
+      "mkt": "Mkt: Sixth Sense Retail Private Limited",
+      "category": "Veterinary",
+      "image": "https://www.netmeds.com/images/product-v1/150x150/1070423/wiggles_floor_cleaner_liquid_pet_friendly_lemongrass_500_ml_526211_0_0.jpg",
+      "id": 42
     }
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-
   ]
 }
-
-
-
-

@@ -1,0 +1,98 @@
+ .badabox{
+    background-color: rgb(13,152,186);
+    top: 0;
+ }
+ 
+ .navbar-links{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    border-top: 1px solid rgb(47, 47, 47);
+    border-bottom: 1px solid rgb(47, 47, 47);
+   justify-content: space-around;
+  
+}
+.navbar-links > div{
+    font-size: 18px;
+    margin-left: 12px;
+    white-space: nowrap;
+    font-family: 'Poppins';
+    color: rgb(47, 47, 47);
+}
+
+.container{
+    display: flex;
+    /* border: 2px solid ; */
+    width: 100%;
+    margin-top: 10px;
+}
+.logo > img{
+    height: 100px;
+    width: 320px;
+    /* position: absolute; */
+    position: relative;
+    
+}
+.logo {
+    height: 110px;
+    width: 320px;
+    /* border: 1px solid red; */
+    position: relative;
+}
+
+#search_nav{
+    border: 1px solid gray;
+    margin: auto;
+    width: 45%;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 10px;
+    border-radius: 8px;
+    
+}
+#search_nav > input{
+    border:none;
+    width: 80%;
+    height: 170%;
+    margin: auto;
+    outline: none;
+}
+#search_nav > button{
+    /* border: 2px solid red; */
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    margin: auto;
+   border:none;
+   width: 20%;
+   height: 170%;
+   color: white;
+   background-color: rgb(110, 50, 144);
+
+}
+/* Logo start here--------------->>>>>>>>>>>. */
+.nav_login_logos {
+    width: 300px;
+    /* border :1px solid; */
+}
+.nav_login_logos > div {
+    /* display: flex; */
+    justify-content: space-between;
+    margin: auto;
+    /* border :1px solid red */
+}
+.nav_login_logos > div span {
+    font-size: 12px;
+
+}
+
+/* --------------------------------------MEGA  MENU ------------------------------ */
+
+.megaMenu{
+    width: 2px solid gray;
+    
+}
+.loginLogo{
+    width: 30px;
+    
+}
+

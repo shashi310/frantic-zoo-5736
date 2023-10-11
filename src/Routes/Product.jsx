@@ -1,13 +1,15 @@
 import "../css/Product.css"
 import axios from 'axios'
 import { useEffect,useState } from 'react'
+import Pagination from "../Components/Pagination"
 import Navbar from './Navbar'
 import Footer from "../Components/Footer"
-import { Box ,Text,Grid,Card,CardBody,Image,Stack,Heading,Divider,CardFooter,ButtonGroup,Button} from "@chakra-ui/react";
+import { Box ,Text,Grid,Card,CardBody,Image,Stack,Heading,Divider,CardFooter,ButtonGroup,Button, Skeleton} from "@chakra-ui/react";
 // import { Grid, GridItem } from "@chakra-ui/react";
 
 import Cart from "../Components/Cart"
 import { Spinner } from "@chakra-ui/react";
+import { Link } from "react-router-dom"
 // import Pagination from "../Components/Pagination"
 
 function Product() {
@@ -20,10 +22,16 @@ function Product() {
   const [pageSize, setPageSize] = useState(10);
   const [isLoading, setIsLoading] = useState(false);
 
+  const [page,setPage]= useState(1)
+
+const totalPages=6
+
   useEffect(() => {
     setIsLoading(true);
-    axios.get(`http://localhost:8080/products`, {
+    axios.get(`https://medmarketapi.onrender.com/products`, {
       params: {
+        // _page: page,
+        // _limit: 6,
         _sort: "price",
         _order: order
       }
@@ -50,14 +58,14 @@ function Product() {
   }
 
   const handleCartfun = (id) => {
-    return axios.get(`http://localhost:8080/products/${id}`);
+    return axios.get(`https://medmarketapi.onrender.com/products/${id}`);
   };
 
   const addToCart = (ele) => {
     handleCartfun(ele.id)
       .then((res) => {
         setCartItems(res.data);
-        return axios.post("http://localhost:8080/cart", res.data);
+        return axios.post("https://medmarketapi.onrender.com/cart", res.data);
       })
       .then(() => {
         alert("Product Added Successfully");
@@ -68,7 +76,7 @@ function Product() {
 
   const getData = () => {
     setIsLoading(true);
-    axios.get(`http://localhost:8080/cart`)
+    axios.get(`https://medmarketapi.onrender.com/cart`)
       .then((res) => setCartItems3(res.data))
       .catch((err) => alert(err))
       .finally(() => setIsLoading(false));
@@ -77,6 +85,18 @@ function Product() {
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
+
+  if(isLoading){
+    return <>
+    <Navbar />
+    <Stack data-cy="loading_indicator">
+    <Skeleton height='20px' />
+    <Skeleton height='20px' />
+    <Skeleton height='20px' />
+    <Skeleton height='20px' />
+  </Stack>
+  </>
+  }
 
   const pageCount = Math.ceil(data.length / pageSize);
   const startIndex = (currentPage - 1) * pageSize;
@@ -194,6 +214,7 @@ function Product() {
           <Button variant='ghost' colorScheme='blue' onClick={() => addToCart(ele)}>
             Add to cart
           </Button>
+          <Link to={`/product/${ele.id}`}> <Button >More Info</Button></Link>
         </ButtonGroup>
       </CardFooter>
     </Card>
@@ -216,6 +237,14 @@ function Product() {
 
 
 </div>
+
+
+{/* <div  style={{marginLeft:"500px",
+marginTop:"30px",
+marginBottom:"30px",
+}}>
+{data.length>0 && <Pagination totalPages={totalPages} handlePageChange={handlePageChange} currentPage={page}/>}
+</div>  */}
     <Footer/>
 </>
   )

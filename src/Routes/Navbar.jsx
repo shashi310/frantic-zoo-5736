@@ -1,11 +1,44 @@
-import React from 'react'
-import { Link } from "react-router-dom";
+import React, { useEffect, useRef, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "../css/Navbar.css"
 import logo from "../images/logo.png"
 import 'typeface-poppins';
+import axios from "axios";
 
 
 function Navbar() {
+  const user=JSON.parse(localStorage.getItem("MedUserData"))||{}
+  console.log(user);
+  const navigate= useNavigate()
+  const handleclick=()=>{
+      navigate("/product")
+  }
+  let ref= useRef()
+const [query,setQuery] =useState("")
+const paramObj={
+ params:{
+  q:query && query,
+ }
+}
+useEffect(()=>{
+  if(ref.current){
+    clearTimeout(ref.current)
+  }
+  ref.current=setTimeout(()=>{
+      // dispatch(getProducts(paramObj))
+      console.log(paramObj);
+    //   axios.get(`https://medmarketapi.onrender.com/products`,paramObj)
+    // .then((res)=>{
+    //     dispatch({type:GET_PRODUCT_SUCCESS,payload:res.data});
+    // })
+    // .catch((err)=>{
+    //     dispatch({type:PRODUCT_FAILURE,payload:err.message});
+    // })
+    },1000);
+  
+
+},[query])
+
   return (
     <div className='badabox'>
    <nav className='container'>
@@ -13,7 +46,7 @@ function Navbar() {
      <img src={logo} alt="picture"/>
     </div></Link>
     <div id='search_nav'>
-    <input placeholder='What are you looking for?'/>
+    <input placeholder='What are you looking for?' onChange={(e)=>setQuery(e.target.value)} onClick={handleclick}/>
     <button>SEARCH</button>
     </div>
     <div className='nav_login_logos' style={{display:"flex",
@@ -22,7 +55,7 @@ function Navbar() {
     }}>
     <div className='loginLogo'>
     <img src='https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blt88337dc20d1d8278/5e178293942caf0fc36b77ab/Header-Icon-PWA-profile.svg'/>
-      <Link to="/login" ><span>Login</span></Link>
+      <Link to="/login" ><span>{user?user.name.slice(0, 4):"Login"}</span></Link>
 
       </div>
     <div>
@@ -36,14 +69,14 @@ function Navbar() {
     </div>
     </nav>
     <div className='navbar-links'>
-      <div><h4>Lab Test</h4></div>
+      <div><Link to="/product"><h4>Lab Test</h4></Link></div>
       
       <div><Link to="/product"><h4>Wellness</h4></Link></div>
       <div><Link to="/product"><h4>Medicine</h4></Link></div>
-      <div><h4>Health Devices</h4></div>
-      <div><h4>Health Corner</h4></div>
-      <div><h4>Doctors</h4></div>
-      <div><h4>Book Appointment</h4></div>
+      <div><Link to="/product"><h4>Health Devices</h4></Link></div>
+      <div><Link to="/product"><h4>Health Corner</h4></Link></div>
+      <div><Link to="/product"><h4>Doctors</h4></Link></div>
+      <div><Link to="/product"><h4>Book Appointment</h4></Link></div>
     
     </div>
     {/* <div className='megaMenu'>

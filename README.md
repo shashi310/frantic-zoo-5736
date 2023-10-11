@@ -7,7 +7,7 @@
 <!-- <h4> To run Buy From Us website clone click below link</h4>
 <ul> <li><a href="https://bbuyfromus.netlify.app/ "> click here </a></li> </ul> -->
 
-<div> <p> A web application for all you medical Needs</p></div>
+<div> <p> A web application for all you medical Needs : Discover comprehensive medical solutions through our versatile web application. Addressing your every healthcare requirement with convenience and precision, we strive to enhance your well-being effectively and efficiently.</p></div>
 <div>
 <h2> Medical Ecommerce website </h2>
 

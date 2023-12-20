@@ -1,25 +1,6 @@
 {
-  "admin": [
-    {
-      "id": "admin",
-      "password": "admin@1234"
-    },
-    {
-      "id": "admin2",
-      "password": "admin@1234"
-    }
-  ],
-  "existing": [
-    {
-      "id": "shashi31396s@gmail.com"
-    },
-    {
-      "id": "tester1@gmail.com"
-    },
-    {
-      "id": "tester2@gmail.com"
-    }
-  ],
+  
+  
   "orders": [
     {
       "userdatails": {
@@ -70,38 +51,25 @@
     },
     {
       "userdatails": {
-        "name": "SHASHIKANT YADAV",
-        "email": "Yshashikant313@gmail.com",
+        "name": "Shashikant Yadav",
+        "email": "shashi31396s@gmail.com",
         "address": "delhi",
         "zip": "110096",
-        "cardNumber": "12345",
-        "expDate": "123",
+        "cardNumber": "12342132546567",
+        "expDate": "12/26",
         "cvv": "123"
       },
       "cart": [
         {
-          "name": "Equal Original Low Calorie Sweetener Sachets 100's",
-          "price": 150,
+          "name": "Dettol Antiseptic Liquid 60 ml",
+          "price": 45,
           "rating": 4,
-          "mkt": "Mkt: Whole Earth Brands Pvt. Ltd.",
-          "category": "Diabetes Care",
-          "image": "https://www.netmeds.com/images/product-v1/150x150/925481/equal_original_low_calorie_sweetener_sachets_100s_409768_0_0.jpg",
-          "id": 16
-        }
-      ],
-      "id": 3
-    },
-    {
-      "userdatails": {
-        "name": "Shashi",
-        "email": "abc@gmail.com",
-        "address": "delhi",
-        "zip": "110096",
-        "cardNumber": "123",
-        "expDate": "123",
-        "cvv": "123"
-      },
-      "cart": [
+          "mkt": "Mkt: Reckitt Benckiser India Ltd",
+          "category": "Covid Essentials",
+          "image": "https://www.netmeds.com/images/product-v1/150x150/15114/dettol_antiseptic_liquid_60_ml_0_2.jpg",
+          "id": 19,
+          "quantity": 2
+        },
         {
           "name": "Revital H Capsule 60'S",
           "price": 550,
@@ -109,46 +77,9 @@
           "mkt": "Mkt: Sun Pharmaceutical Industries Lt",
           "category": "Suppliment",
           "image": "https://www.netmeds.com/images/product-v1/150x150/113653/revital_h_capsule_60s_37254_0_1.jpg",
-          "id": 7
-        }
-      ],
-      "id": 4
-    },
-    {
-      "userdatails": {
-        "name": "Shashikant Yadav",
-        "email": "shashi31396s@gmail.com",
-        "address": "delhi",
-        "zip": "110096",
-        "cardNumber": "12345",
-        "expDate": "123",
-        "cvv": "123"
-      },
-      "cart": [
-        {
-          "name": "Dr.Morphen Premium ORS Refreshing Orange Flavour",
-          "price": 22,
-          "rating": 4,
-          "mkt": "Mkt: Dr Morepen",
-          "category": "Suppliment",
-          "image": "https://www.netmeds.com/images/product-v1/150x150/856551/dr_morphen_premium_ors_refreshing_orange_flavour_21_8_gm_0_0.jpg",
-          "id": 10,
+          "id": 7,
           "quantity": 2
-        }
-      ],
-      "id": 5
-    },
-    {
-      "userdatails": {
-        "name": "Shashikant Yadav",
-        "email": "12@gmail.cpo",
-        "address": "delhi",
-        "zip": "110096",
-        "cardNumber": "12345",
-        "expDate": "123",
-        "cvv": "123"
-      },
-      "cart": [
+        },
         {
           "name": "Dabur Pudin Hara Pearls Capsule 10's",
           "price": 30,
@@ -156,46 +87,43 @@
           "mkt": "Mkt: Dabur India Ltd",
           "category": "Ayurvedic",
           "image": "https://www.netmeds.com/images/product-v1/150x150/15917/dabur_pudin_hara_pearls_capsule_10_s_0.jpg",
-          "id": 1
+          "id": 1,
+          "quantity": 1
         }
       ],
-      "id": 6
+      "totalPrice": 1220,
+      "id": 3
     }
   ],
   "cart": [
     {
-      "name": "Dettol Antiseptic Liquid 60 ml",
-      "price": 45,
+      "name": "Dr.Morphen Premium ORS Refreshing Orange Flavour",
+      "price": 22,
       "rating": 4,
-      "mkt": "Mkt: Reckitt Benckiser India Ltd",
-      "category": "Covid Essentials",
-      "image": "https://www.netmeds.com/images/product-v1/150x150/15114/dettol_antiseptic_liquid_60_ml_0_2.jpg",
-      "id": 19
-    },
-    {
-      "name": "Revital H Capsule 60'S",
-      "price": 550,
-      "rating": 4,
-      "mkt": "Mkt: Sun Pharmaceutical Industries Lt",
+      "mkt": "Mkt: Dr Morepen",
       "category": "Suppliment",
-      "image": "https://www.netmeds.com/images/product-v1/150x150/113653/revital_h_capsule_60s_37254_0_1.jpg",
-      "id": 7
+      "image": "https://www.netmeds.com/images/product-v1/150x150/856551/dr_morphen_premium_ors_refreshing_orange_flavour_21_8_gm_0_0.jpg",
+      "id": 10,
+      "quantity": 0
     }
   ],
   "login": [
     {
-      "email": "12@gmail.cpo",
-      "password": "12",
+      "name": "Shashikant Yadav",
+      "email": "dreko@gmail.com",
+      "password": "dreko",
       "id": 1
     },
     {
+      "name": "kitab",
       "email": "abc@gmail.com",
-      "password": "123",
+      "password": "abc",
       "id": 2
     },
     {
-      "email": "abcd@gmail.com",
-      "password": "12345",
+      "name": "S1",
+      "email": "12@gmail.cpo",
+      "password": "12",
       "id": 3
     }
   ],

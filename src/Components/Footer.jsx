@@ -2,7 +2,7 @@ import React from 'react'
 import "../css/Footer.css"
 import 'typeface-poppins';
 import follow from "../images/follow.png"
-
+import { Box} from "@chakra-ui/react";
 function Footer() {
   return (
 
@@ -40,14 +40,20 @@ function Footer() {
     <h6>Discounts Everyday</h6>
    </div>
 
-   <div>
+   <Box display={{
+          base: "none",
+          sm: "none",
+          md: "none",
+          lg: "block",
+          xl: "block",
+        }}>
     <h5>OUR STORES</h5>
     <h6>Store Locator</h6>
     <h6>Franchise Opportunities</h6>
     <h6>Local DIY Events</h6>
     <h6>ACCOUNT LOGIN</h6>
     <h6>Sign In to Your Account</h6>
-   </div>
+   </Box>
 
    <div>
     <h5>CORPORATE</h5>
@@ -67,10 +73,16 @@ function Footer() {
     <h6>Jim's Corner</h6>
    </div>
 
-   <div className='follow'>
+   <Box className='follow' display={{
+          base: "none",
+          sm: "none",
+          md: "none",
+          lg: "block",
+          xl: "block",
+        }}>
    
     <img src={follow} alt='follow'/>
-   </div>
+   </Box>
 
 
 

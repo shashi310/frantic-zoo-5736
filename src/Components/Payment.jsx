@@ -53,6 +53,7 @@ const Payment = () => {
 
 // fetch the cart details ****************************
 const [data,setData]=useState([])
+
 const fetchAndUpdateData = async (url)=>{
   try {    
       let res = await getData(url)        
@@ -63,8 +64,12 @@ const fetchAndUpdateData = async (url)=>{
       // set err state to false 
   }
 }
+
+  
+
+
 useEffect (()=>{
-  fetchAndUpdateData(`http://localhost:8080/cart`)
+  fetchAndUpdateData(`https://medmarketapi.onrender.com/cart`)
   },[])
 
 
@@ -73,19 +78,25 @@ useEffect (()=>{
 // ****************************
 
 
+
+
+
+const price=data.reduce((total, item) => total + item.price * (item.quantity||1), 0)
+
 // now post data to the server
 function Postme(){
   if(timese){
     clearTimeout(timese)
   }
- timese= axios.post(`http://localhost:8080/orders`,{
+ timese= axios.post(`https://medmarketapi.onrender.com/orders`,{
   userdatails:cardDetails,
   cart:data,
+  totalPrice:price
 },20000)
 }
 
 
-
+// console.log("proce",typeof(price));
 
 
   

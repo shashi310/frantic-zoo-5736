@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import {
   Box,
@@ -15,20 +15,21 @@ import axios from "axios";
 
 const LoginSignup = () => {
   const navigate = useNavigate()
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+const [users,setUsers]=useState([])
+
+  const [email, setEmail] = useState("dreko@gmail.com");
+  const [password, setPassword] = useState("dreko");
   const [isLogin, setIsLogin] = useState(true);
 
   const toast = useToast();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const response = await axios.post(
-        `http://localhost:8080/${isLogin ? "login" : "signup"}`,
-        { email, password }
-      );
-      if (isLogin) {
+   
+    const matchedUser = users.find((user) => user.email === email && user.password === password);
+
+    if(matchedUser){
+     localStorage.setItem("MedUserData", JSON.stringify(matchedUser)); 
         toast({
           title: "Login successful",
           description: "Welcome back!",
@@ -38,59 +39,28 @@ const LoginSignup = () => {
           
         });
         navigate("/");
-      } else {
-        setEmail("");
-        setPassword("");
-        setIsLogin(true);
-        toast({
-          title: "Signup successful",
-          description: "Your account has been created.",
-          status: "success",
-          duration: 5000,
-          isClosable: true,
-        });
-      }
-    } catch (error) {
-      // handle error
-    }
+ 
   };
+}
   
-    
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     const response = await axios.post(
-  //       `http://localhost:8080/${isLogin ? "login" : "signup"}`,
-  //       { email, password }
-  //     );
-  //     toast({
-  //       title: `${isLogin ? "Login" : "Signup"} successful`,
-  //       description: `Welcome!`,
-  //       status: "success",
-  //       duration: 5000,
-  //       isClosable: true,
-  //     });
-  //   } catch (error) {
-      
-  //   }
-  //   setTimeout(() => {
-     
-  //     setEmail("");
-  //     setPassword("");
-  //     alert("Account created. Please log in to continue.");   
-  //     navigate("/")
-  //   }, 1000);
-  // };
-
-  
-
+useEffect(()=>{
+  try {
+    const response =  axios.get(`https://medmarketapi.onrender.com/login`)
+    .then((response)=>{
+ 
+  setUsers(response.data)
+    })
+  } catch (error) {
+    console.log(error);
+  }
+},[])
 
   return (
     <div>
       <Navbar />
     <Box maxW="md" mx="auto" mt={8} p={6} borderWidth={1} borderRadius={8}>
       <Text fontWeight="bold" fontSize="2xl" mb={6} textAlign="center">
-        {isLogin ? "Login" : "Signup"}
+        Login
       </Text>
       <form onSubmit={handleSubmit}>
         <Stack spacing={3}>
@@ -113,23 +83,18 @@ const LoginSignup = () => {
             />
           </FormControl>
           <Button type="submit" colorScheme="blue" isLoading={false}>
-            {isLogin ? "Login" : "Signup"}
+            Login
           </Button>
         </Stack>
       </form>
-      <Box textAlign="center" mt={4}>
-        <Text>
-          {isLogin ? "Don't have an account?" : "Already have an account?"}
-          <Box
-            as="span"
-            color="blue.500"
-            cursor="pointer"
-            onClick={() => setIsLogin(!isLogin)}
-          >
-            {isLogin ? " Signup" : " Login"}
-          </Box>
-        </Text>
-      </Box>
+  
+
+<Text mx="20%" marginTop="4">
+  New User ?{" "}
+  <Link to="/signup" color="blue">
+    Click Here
+  </Link>
+</Text>
     </Box>
     </div>
   );

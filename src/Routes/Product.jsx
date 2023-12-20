@@ -1,13 +1,16 @@
 import "../css/Product.css"
 import axios from 'axios'
 import { useEffect,useState } from 'react'
+import Pagination from "../Components/Pagination"
 import Navbar from './Navbar'
 import Footer from "../Components/Footer"
-import { Box ,Text,Grid,Card,CardBody,Image,Stack,Heading,Divider,CardFooter,ButtonGroup,Button} from "@chakra-ui/react";
+import { Box ,Text,Grid,Card,CardBody,Image,Stack,Heading,Divider,CardFooter,ButtonGroup,Button, Skeleton} from "@chakra-ui/react";
 // import { Grid, GridItem } from "@chakra-ui/react";
 
 import Cart from "../Components/Cart"
 import { Spinner } from "@chakra-ui/react";
+import { Link } from "react-router-dom"
+import Loading from "../Components/Loading"
 // import Pagination from "../Components/Pagination"
 
 function Product() {
@@ -20,10 +23,16 @@ function Product() {
   const [pageSize, setPageSize] = useState(10);
   const [isLoading, setIsLoading] = useState(false);
 
+  const [page,setPage]= useState(1)
+
+const totalPages=6
+
   useEffect(() => {
     setIsLoading(true);
-    axios.get(`http://localhost:8080/products`, {
+    axios.get(`https://medmarketapi.onrender.com/products`, {
       params: {
+        // _page: page,
+        // _limit: 6,
         _sort: "price",
         _order: order
       }
@@ -35,6 +44,7 @@ function Product() {
           filteredData = data.filter(data => filterByColors.includes(data.category));
         }
         setData(filteredData);
+        setIsLoading(false)
       })
       .catch((err) => alert(err))
       .finally(() => setIsLoading(false));
@@ -50,14 +60,14 @@ function Product() {
   }
 
   const handleCartfun = (id) => {
-    return axios.get(`http://localhost:8080/products/${id}`);
+    return axios.get(`https://medmarketapi.onrender.com/products/${id}`);
   };
 
   const addToCart = (ele) => {
     handleCartfun(ele.id)
       .then((res) => {
         setCartItems(res.data);
-        return axios.post("http://localhost:8080/cart", res.data);
+        return axios.post("https://medmarketapi.onrender.com/cart", res.data);
       })
       .then(() => {
         alert("Product Added Successfully");
@@ -68,7 +78,7 @@ function Product() {
 
   const getData = () => {
     setIsLoading(true);
-    axios.get(`http://localhost:8080/cart`)
+    axios.get(`https://medmarketapi.onrender.com/cart`)
       .then((res) => setCartItems3(res.data))
       .catch((err) => alert(err))
       .finally(() => setIsLoading(false));
@@ -77,6 +87,18 @@ function Product() {
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
+
+  if(isLoading){
+    return <>
+    <Navbar />
+    <Stack data-cy="loading_indicator">
+    <Skeleton height='20px' />
+    <Skeleton height='20px' />
+    <Skeleton height='20px' />
+    <Skeleton height='20px' />
+  </Stack>
+    </>
+  }
 
   const pageCount = Math.ceil(data.length / pageSize);
   const startIndex = (currentPage - 1) * pageSize;
@@ -109,9 +131,15 @@ function Product() {
  
   return (
     <>
+    
 
     <Navbar/>
-
+    {/* {isLoading && <Stack data-cy="loading_indicator">
+    <Skeleton height='20px' />
+    <Skeleton height='20px' />
+    <Skeleton height='20px' />
+    <Skeleton height='20px' />
+  </Stack>} */}
     {/* ---------------sort---by-----price------------------- */}
     
     <div className="all-product">
@@ -163,9 +191,17 @@ function Product() {
     </div>
     {/* ----------------------------------------------------------------------------------------------------- */}
     <div className="makeit">
-    <Grid templateColumns="repeat(3, 1fr)" gap={6}>
+    <Grid
+    // w="100%"
+    // gap="35px"
+    // columns={{ base: "1", sm: "2", md: "3", lg: "3", xl: "3" }}
+    // templateColumns="repeat(3, 1fr)" gap={6} 
+    templateColumns={{ base: '1fr', sm: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)', lg: 'repeat(2, 1fr)', xl: 'repeat(3, 1fr)' }}
+    gap={6}
+    // ml={{ base: '20%', sm: '10%',md: "none", lg: "none", xl: "none" }}
+    >
   {data.map((ele) => (
-    <Card key={ele.id} maxW='xs'>
+    <Card key={ele.id} maxW='xs' ml={{ base: '20%', sm: '10%',md: "none", lg: "none", xl: "none" }}>
       <CardBody>
         <Image
           src={ele.image}
@@ -191,9 +227,10 @@ function Product() {
       <CardFooter>
         <ButtonGroup spacing='2'>
 
-          <Button variant='ghost' colorScheme='blue' onClick={() => addToCart(ele)}>
+          <Button  colorScheme='teal' variant='outline' onClick={() => addToCart(ele)}>
             Add to cart
           </Button>
+          <Link to={`/product/${ele.id}`}> <Button colorScheme='teal'>More Info</Button></Link>
         </ButtonGroup>
       </CardFooter>
     </Card>
@@ -216,6 +253,14 @@ function Product() {
 
 
 </div>
+
+
+{/* <div  style={{marginLeft:"500px",
+marginTop:"30px",
+marginBottom:"30px",
+}}>
+{data.length>0 && <Pagination totalPages={totalPages} handlePageChange={handlePageChange} currentPage={page}/>}
+</div>  */}
     <Footer/>
 </>
   )

@@ -14,16 +14,9 @@ function Cart() {
     fetchCartData();
   }, []);
   
-  // function fetchCartData() {
-  //   axios.get(`http://localhost:8080/cart`)
-  //     .then((res) => setCartItems(res.data))
-  // }
-  // function fetchCartData() {
-  //   axios.get(`http://localhost:8080/cart`)
-  //   .then((res) => setCartItems(res.data.map((item) => ({ ...item, quantity: 1 }))))
-  //   }
+ 
   function fetchCartData() {
-    axios.get(`http://localhost:8080/cart`)
+    axios.get(`https://medmarketapi.onrender.com/cart`)
       .then((res) => {
         const cartItemsWithDefaultQuantity = res.data.map(item => ({...item, quantity: 1}));
         setCartItems(cartItemsWithDefaultQuantity);
@@ -32,7 +25,7 @@ function Cart() {
 
   
   const handleRemoveItem = (itemId) => {
-    axios.delete(`http://localhost:8080/cart/${itemId}`)
+    axios.delete(`https://medmarketapi.onrender.com/cart/${itemId}`)
       .then(() => fetchCartData())
       .catch((error) => console.log(error));
   }
@@ -45,7 +38,7 @@ function Cart() {
       updatedCartItems[itemIndex].quantity -= 1;
     }
     setCartItems(updatedCartItems);
-    axios.put(`http://localhost:8080/cart/${itemId}`, updatedCartItems[itemIndex])
+    axios.put(`https://medmarketapi.onrender.com/cart/${itemId}`, updatedCartItems[itemIndex])
       .catch((error) => console.log(error));
   };
   

@@ -6,7 +6,7 @@ import poster from "../images/poster.png"
 import { AiFillStar } from "react-icons/ai";
 import { BiRightArrowAlt } from "react-icons/bi";
 import 'typeface-poppins';
-
+import { Box} from "@chakra-ui/react";
 
 function Home() {
 
@@ -31,11 +31,17 @@ function Home() {
     <>
     <Navbar/>
      <div className='Home-container'>
-        <div className='two-in-one'>
+        <Box className='two-in-one' >
         <img src='https://www.netmeds.com/images/cms/aw_rbslider/slides/1682870704_Web_Home_Bannersvbvv.jpg?quality=70&auto=webp&optimize={medium}' alt='first-image'/>
         <form className='form-home-occasion'>
         <h4 style={{color:"rgb(110, 50, 144)"}}>Get the Service Now</h4>
-        <div className='Find-perfecti-gift'>
+        <Box className='Find-perfecti-gift' display={{
+          base: "none",
+          sm: "none",
+          md: "none",
+          lg: "flex",
+          xl: "flex",
+        }}>
         <div>
         <label>Locate Yourself</label>
          <input placeholder='Delivery zip code'/>
@@ -50,10 +56,10 @@ function Home() {
         <option value="item4">Health Devices</option>
        </select>
          </div>
-        </div>
+        </Box>
         <button>Order Now</button>
          </form>
-        </div>
+        </Box>
 
 
         <h1>Shop by Category</h1>
@@ -251,7 +257,13 @@ function Home() {
           <h5>- Pamela</h5>
          </div>
 
-         <div>
+         <Box display={{
+          base: "none",
+          sm: "none",
+          md: "none",
+          lg: "block",
+          xl: "block",
+        }}>
           <img src='https://www.netmeds.com/images/product-v1/150x150/924248/gynocup_reusable_menstrual_cup_small_natural_intimate_gynowipe_10s_natural_menstrual_cup_wash_liquid_100_ml_426070_0_1.jpg?quality=60&auto=webp&optimize={medium}' alt='2nd-img'/>
           <div className='start-color'>
           <AiFillStar/>
@@ -263,7 +275,7 @@ function Home() {
           <h5>satisfied</h5>
           <p>"goood Product"</p>
           <h5>- Jennifer</h5>
-         </div>
+         </Box>
 
          <div>
           <img src='https://www.netmeds.com/images/product-v1/150x150/1058957/newnik_digital_weighing_scale_grey_1s_461155_0_0.jpg?quality=60&auto=webp&optimize={medium}' alt='3-img'/>
@@ -279,7 +291,13 @@ function Home() {
           <h5>- Betty</h5>
          </div>
 
-         <div>
+         <Box display={{
+          base: "none",
+          sm: "none",
+          md: "none",
+          lg: "block",
+          xl: "block",
+        }}>
           <img src='https://www.netmeds.com/images/product-v1/150x150/1069586/sahyog_wellness_stature_meter_wall_mount_height_measurement_2m_200cm_black_1s_496190_0_1.jpg?quality=60&auto=webp&optimize={medium}' alt='4-img'/>
           <div className='start-color'>
           <AiFillStar/>
@@ -291,7 +309,7 @@ function Home() {
           <h5>Loved it</h5>
           <p>"Such a Quality item"</p>
           <h5>- Brian</h5>
-         </div>
+         </Box>
       </div>
       <div className='powered-by-img'>
          <p>Powered by</p>
